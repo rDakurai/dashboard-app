@@ -2,13 +2,18 @@
     <thead>
         <tr>
             <th scope="col">#</th>
-            <th scope="col">Name</th>
+            <th scope="col">Nombre</th>
             <th scope="col">Email</th>
         </tr>
     </thead>
     <tbody>
-        @for (contact of contacts; track contact.id){
-            <app-contact-row [contact]="contact"></app-contact-row>
+        @if (cargando){
+            <tr><td colspan="3">Cargando...</td></tr>
+        } @else{
+            @for (contact of contacts; track contact.id){
+            <tr app-contact-row [contact]="contact"></tr>
         }
+    }
+        
     </tbody>
 </table>

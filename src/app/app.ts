@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
-import { ContactListComponent } from './components/contact-list/contact-list';
+import { Component, signal } from '@angular/core';
+import { ContactList } from './components/contact-list/contact-list';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ContactListComponent],
+  imports: [ContactList],
   templateUrl: './app.html',
 })
 export class App {
